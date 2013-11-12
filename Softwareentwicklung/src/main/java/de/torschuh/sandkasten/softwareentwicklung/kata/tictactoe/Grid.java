@@ -1,9 +1,9 @@
-package de.master.softwareentwicklung.kata.tictactoe;
+package de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe;
 
 
 import java.util.ArrayList;
 
-import de.master.softwareentwicklung.kata.tictactoe.Cell.POSITION;
+import de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.Cell.POSITION;
 
 public class Grid {
 

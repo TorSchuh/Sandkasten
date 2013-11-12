@@ -1,4 +1,4 @@
-package de.master.softwareentwicklung.kata.tictactoe;
+package de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe;
 
 
 public class Cell {

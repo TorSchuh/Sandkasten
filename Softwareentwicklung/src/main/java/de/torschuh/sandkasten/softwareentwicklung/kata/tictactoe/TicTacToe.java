@@ -1,12 +1,12 @@
-package de.master.softwareentwicklung.kata.tictactoe;
+package de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe;
 
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-import de.master.softwareentwicklung.kata.tictactoe.Cell.POSITION;
-import de.master.softwareentwicklung.kata.tictactoe.Cell.TYPE;
+import de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.Cell.POSITION;
+import de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.Cell.TYPE;
 
 
 public class TicTacToe {
