@@ -1,5 +1,7 @@
 package de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.interfaces;
 
+import de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.interfaces.Locatable.Identifier;
+
 
 /**
  * Playboard
@@ -9,7 +11,7 @@ package de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.int
  * @author Torsten
  *
  */
-interface Playboard {
+public interface Playboard {
     
     /**
      * Cleares the playboard.
@@ -22,5 +24,14 @@ interface Playboard {
      * @param pField field to add to the playboard
      */
     void addField(Field pField);
+    
+    /**
+     * Returns field with the specified identifier.
+     * 
+     * @param pIdentifier 
+     * @return Field field with the specified identifier
+     * @throws Exception 
+     */
+    Field getField(Identifier pIdentifier) throws Exception;
     
 }

@@ -1,7 +1,7 @@
 /**
  * 
  */
-package de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.implementation;
+package de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.implementation.tokens;
 
 import de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.abstraction.AbstractToken;
 

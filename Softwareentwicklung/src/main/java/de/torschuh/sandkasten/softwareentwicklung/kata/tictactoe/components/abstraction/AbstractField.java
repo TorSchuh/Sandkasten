@@ -62,6 +62,15 @@ public abstract class AbstractField implements Field, Locatable, Neighbours {
     }
 
     /* (non-Javadoc)
+     * @see de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.interfaces.Locatable#getNeighbour( 
+     *      de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.interfaces.Neighbours.Direction)
+     */
+    @Override
+    public final Field getNeighbour(final Direction pDirection) {
+        return this.neighbours.get(pDirection);
+    }
+    
+    /* (non-Javadoc)
      * @see de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.interfaces.Locatable#getIdentifier()
      */
     @Override
