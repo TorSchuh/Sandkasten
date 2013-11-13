@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<JDepend>
+    <Packages>
+
+        <Package name="de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.interfaces">
+            <Stats>
+                <TotalClasses>2</TotalClasses>
+                <ConcreteClasses>0</ConcreteClasses>
+                <AbstractClasses>2</AbstractClasses>
+                <Ca>0</Ca>
+                <Ce>1</Ce>
+                <A>1</A>
+                <I>1</I>
+                <D>1</D>
+                <V>1</V>
+            </Stats>
+
+            <AbstractClasses>
+                <Class sourceFile="Playboard.java">
+                    de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.interfaces.Playboard
+                </Class>
+                <Class sourceFile="package-info.java">
+                    de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.interfaces.package-info
+                </Class>
+            </AbstractClasses>
+
+            <ConcreteClasses>
+            </ConcreteClasses>
+
+            <DependsUpon>
+                <Package>java.lang</Package>
+            </DependsUpon>
+
+            <UsedBy>
+            </UsedBy>
+        </Package>
+
+        <Package name="java.lang">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+    </Packages>
+
+    <Cycles>
+    </Cycles>
+</JDepend>

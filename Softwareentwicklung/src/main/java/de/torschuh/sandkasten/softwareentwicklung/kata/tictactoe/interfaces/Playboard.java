@@ -1,51 +1,47 @@
 package de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.interfaces;
 
+
 /**
  * Playboard
  *
- * Interface to create/modify/delete a playboard with fields.
+ * Interface to implement a playboard with fields.
  * 
  * @author Torsten
  *
  */
 interface Playboard {
-        
-    /**
-     * Creates a playboard.
-     */
-    void createPlayboard();
     
     /**
-     * Deletes a playboard.
+     * Cleares the playboard.
      */
-    void deletePlayboard();
+    void clearPlayboard();
     
     /**
-     * Adds an specified field to the playboard.
+     * Adds a specified field to the playboard.
      */
     void addField();
     
     /**
-     * Deletes an specified field from the playboard.
+     * Deletes an existing field from the playboard.
      * 
-     * @param id id of the field 
+     * @param fieldId id of the field 
      */    
-    void removeField(int id);
+    void removeField(String fieldId);
     
     /**
-     * Returns an specified field.
+     * Returns an existing field.
      * 
-     * @param id id of the field  
+     * @param fieldId id of the field  
      * @return field with given id
      */
-    Object getField(int id);
+    Object getField(String fieldId);
     
     /**
-     * Sets a field with the given id.
+     * Sets an existing field with the given id.
      * 
-     * @param id id of the field
+     * @param fieldId id of the field
      * @param field new field object
      */
-    void setField(int id, Object field);
+    void setField(String fieldId, Object field);
     
 }
