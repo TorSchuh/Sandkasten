@@ -9,7 +9,7 @@ package de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.interfaces;
  *
  */
 interface Playboard {
-    
+        
     /**
      * Creates a playboard.
      */
