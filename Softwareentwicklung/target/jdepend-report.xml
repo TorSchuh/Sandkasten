@@ -2,11 +2,11 @@
 <JDepend>
     <Packages>
 
-        <Package name="de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.interfaces">
+        <Package name="de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components">
             <Stats>
-                <TotalClasses>2</TotalClasses>
+                <TotalClasses>1</TotalClasses>
                 <ConcreteClasses>0</ConcreteClasses>
-                <AbstractClasses>2</AbstractClasses>
+                <AbstractClasses>1</AbstractClasses>
                 <Ca>0</Ca>
                 <Ce>1</Ce>
                 <A>1</A>
@@ -16,11 +16,8 @@
             </Stats>
 
             <AbstractClasses>
-                <Class sourceFile="Playboard.java">
-                    de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.interfaces.Playboard
-                </Class>
                 <Class sourceFile="package-info.java">
-                    de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.interfaces.package-info
+                    de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.package-info
                 </Class>
             </AbstractClasses>
 
@@ -35,7 +32,143 @@
             </UsedBy>
         </Package>
 
+        <Package name="de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.abstraction">
+            <Stats>
+                <TotalClasses>3</TotalClasses>
+                <ConcreteClasses>0</ConcreteClasses>
+                <AbstractClasses>3</AbstractClasses>
+                <Ca>1</Ca>
+                <Ce>3</Ce>
+                <A>1</A>
+                <I>0.75</I>
+                <D>0.75</D>
+                <V>1</V>
+            </Stats>
+
+            <AbstractClasses>
+                <Class sourceFile="AbstractField.java">
+                    de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.abstraction.AbstractField
+                </Class>
+                <Class sourceFile="AbstractToken.java">
+                    de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.abstraction.AbstractToken
+                </Class>
+                <Class sourceFile="package-info.java">
+                    de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.abstraction.package-info
+                </Class>
+            </AbstractClasses>
+
+            <ConcreteClasses>
+            </ConcreteClasses>
+
+            <DependsUpon>
+                <Package>de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.interfaces</Package>
+                <Package>java.lang</Package>
+                <Package>java.util</Package>
+            </DependsUpon>
+
+            <UsedBy>
+                <Package>de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.implementation</Package>
+            </UsedBy>
+        </Package>
+
+        <Package name="de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.implementation">
+            <Stats>
+                <TotalClasses>4</TotalClasses>
+                <ConcreteClasses>3</ConcreteClasses>
+                <AbstractClasses>1</AbstractClasses>
+                <Ca>0</Ca>
+                <Ce>2</Ce>
+                <A>0.25</A>
+                <I>1</I>
+                <D>0.25</D>
+                <V>1</V>
+            </Stats>
+
+            <AbstractClasses>
+                <Class sourceFile="package-info.java">
+                    de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.implementation.package-info
+                </Class>
+            </AbstractClasses>
+
+            <ConcreteClasses>
+                <Class sourceFile="TokenBlank.java">
+                    de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.implementation.TokenBlank
+                </Class>
+                <Class sourceFile="TokenCircle.java">
+                    de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.implementation.TokenCircle
+                </Class>
+                <Class sourceFile="TokenCross.java">
+                    de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.implementation.TokenCross
+                </Class>
+            </ConcreteClasses>
+
+            <DependsUpon>
+                <Package>de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.abstraction</Package>
+                <Package>java.lang</Package>
+            </DependsUpon>
+
+            <UsedBy>
+            </UsedBy>
+        </Package>
+
+        <Package name="de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.interfaces">
+            <Stats>
+                <TotalClasses>8</TotalClasses>
+                <ConcreteClasses>2</ConcreteClasses>
+                <AbstractClasses>6</AbstractClasses>
+                <Ca>1</Ca>
+                <Ce>2</Ce>
+                <A>0.75</A>
+                <I>0.67</I>
+                <D>0.42</D>
+                <V>1</V>
+            </Stats>
+
+            <AbstractClasses>
+                <Class sourceFile="Field.java">
+                    de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.interfaces.Field
+                </Class>
+                <Class sourceFile="Locatable.java">
+                    de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.interfaces.Locatable
+                </Class>
+                <Class sourceFile="Neighbours.java">
+                    de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.interfaces.Neighbours
+                </Class>
+                <Class sourceFile="Playboard.java">
+                    de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.interfaces.Playboard
+                </Class>
+                <Class sourceFile="Token.java">
+                    de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.interfaces.Token
+                </Class>
+                <Class sourceFile="package-info.java">
+                    de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.interfaces.package-info
+                </Class>
+            </AbstractClasses>
+
+            <ConcreteClasses>
+                <Class sourceFile="Locatable.java">
+                    de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.interfaces.Locatable$Identifier
+                </Class>
+                <Class sourceFile="Neighbours.java">
+                    de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.interfaces.Neighbours$Direction
+                </Class>
+            </ConcreteClasses>
+
+            <DependsUpon>
+                <Package>java.lang</Package>
+                <Package>java.util</Package>
+            </DependsUpon>
+
+            <UsedBy>
+                <Package>de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.abstraction</Package>
+            </UsedBy>
+        </Package>
+
         <Package name="java.lang">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="java.util">
             <error>No stats available: package referenced, but not analyzed.</error>
         </Package>
     </Packages>
