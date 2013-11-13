@@ -10,12 +10,32 @@ import java.util.Map;
  */
 public interface Neighbours {
 
-    static enum Direction {N, NE, E, SE, S, SW, W, NW};
+    /**
+     * Directions of the neighbouring fileds.
+     */
+    static enum Direction { N, NE, E, SE, S, SW, W, NW };
     
+    /**
+     * Map with neighbouring fields and there direction.
+     * 
+     * @return Map with directions and the according field.
+     */
     Map<Direction, Field> getNeighbours();
     
-    void addNeighbour(Direction direction, Field neighbour);
+    /**
+     * Adds a field with the specified direction.
+     * 
+     * @param pDirection direction of the field
+     * @param pNeighbour the neighbouring field
+     */
+    void addNeighbour(Direction pDirection, Field pNeighbour);
     
-    void replaceNeighbour(Direction direction, Field neighbour);
+    /**
+     * Replaces a specified field.
+     * 
+     * @param pDirection direction of the requested field
+     * @return Field the requested field
+     */
+    Field getNeighbour(Direction pDirection);
     
 }

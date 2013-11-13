@@ -19,8 +19,8 @@ interface Playboard {
     /**
      * Adds a specified field to the playboard.
      * 
-     * @param field field to add to the playboard
+     * @param pField field to add to the playboard
      */
-    void addField(Field field);
+    void addField(Field pField);
     
 }

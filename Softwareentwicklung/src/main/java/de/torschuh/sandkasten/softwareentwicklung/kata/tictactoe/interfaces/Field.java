@@ -21,8 +21,8 @@ public interface Field {
     /**
      * Sets the token of the field.
      * 
-     * @param token token to set 
+     * @param pToken token to set 
      */
-    void setToken(Token token);
+    void setToken(Token pToken);
     
 }

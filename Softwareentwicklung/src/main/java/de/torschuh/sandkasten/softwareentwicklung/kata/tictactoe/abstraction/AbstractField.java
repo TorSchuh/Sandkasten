@@ -14,14 +14,31 @@ import de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.interfaces.Toke
  */
 public abstract class AbstractField implements Field, Locatable, Neighbours {
 
-    Map<Direction, Field> neighbours = new HashMap<Neighbours.Direction, Field>();
-    Identifier identifier;
-    Token token;
+    /**
+     * Map with all neighbouring fields and there direction.
+     */
+    private Map<Direction, Field> neighbours;
     
-    public AbstractField(Token token, Identifier identifier) {
+    /**
+     * Unique identifier of the location.
+     */
+    private final Identifier identifier;
+    
+    /**
+     * Token on the field.
+     */
+    private Token token;
+    
+    /**
+     * Standard constructor to create Field.
+     * 
+     * @param pToken token to set 
+     * @param pIdentifier identifier to set
+     */
+    public AbstractField(final Token pToken, final Identifier pIdentifier) {
         this.neighbours = new HashMap<Neighbours.Direction, Field>();
-        this.token = token;
-        this.identifier = identifier;
+        this.token = pToken;
+        this.identifier = pIdentifier;
     }
     
     /* (non-Javadoc)
@@ -33,19 +50,23 @@ public abstract class AbstractField implements Field, Locatable, Neighbours {
     }
 
     /* (non-Javadoc)
-     * @see de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.interfaces.Neighbours#addNeighbour(de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.interfaces.Field, de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.interfaces.Neighbours.Direction)
+     * @see de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.interfaces.Neighbours
+     *      #addNeighbour(de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.interfaces.Field, 
+     *      de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.interfaces.Neighbours.Direction)
      */
     @Override
-    public void addNeighbour(final Direction direction, final Field neighbour) {
-        this.neighbours.put(direction, neighbour);
+    public final void addNeighbour(final Direction pDirection, final Field pNeighbour) {
+        this.neighbours.put(pDirection, pNeighbour);
     }
 
     /* (non-Javadoc)
-     * @see de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.interfaces.Neighbours#replaceNeighbour(de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.interfaces.Neighbours.Direction, de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.interfaces.Field)
+     * @see de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.interfaces.Neighbours
+     *      #replaceNeighbour(de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.interfaces.Neighbours.Direction, 
+     *      de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.interfaces.Field)
      */
     @Override
-    public void replaceNeighbour(final Direction direction, final Field neighbour) {
-        this.neighbours.remove(direction);
+    public final void replaceNeighbour(final Direction pDirection, final Field pNeighbour) {
+        this.neighbours.remove(pDirection);
     }
 
     /* (non-Javadoc)
@@ -65,11 +86,12 @@ public abstract class AbstractField implements Field, Locatable, Neighbours {
     }
 
     /* (non-Javadoc)
-     * @see de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.interfaces.Field#setToken(de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.interfaces.Token)
+     * @see de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.interfaces.Field
+     *      #setToken(de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.interfaces.Token)
      */
     @Override
-    public void setToken(final Token token) {
-        this.token = token;
+    public final void setToken(final Token pToken) {
+        this.token = pToken;
     }
 
 }
