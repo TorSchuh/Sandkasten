@@ -1,56 +1,28 @@
 package de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.interfaces;
 
+
 /**
  * Field
  * 
- * Interface to flexible implement a playboardfield.
+ * Interface for a playboardfield.
  * 
  * @author Torsten
  *
  */
 public interface Field {
-    
+
     /**
-     * Adds a property to the field.
+     * Returns the set token.
      * 
-     * @param propertyId id of the property
-     * @param propertyValue value of the property
+     * @return Token set token of the field
      */
-    void addProperty(String propertyId, String propertyValue);
-    
+    Token getToken();
+
     /**
-     * Sets an existing property.
-     *  
-     * @param propertyId id of the property
-     * @param propertyValue value of the property
-     */
-    void setProperty(String propertyId, String propertyValue);
-    
-    /**
-     * Removes an existing field.
+     * Sets the token of the field.
      * 
-     * @param propertyId id of the property
+     * @param token token to set 
      */
-    void removeProperty(String propertyId);
+    void setToken(Token token);
     
-    /**
-     * Clears the properties.
-     */
-    void clearProperties();
-    
-    /**
-     * Return id and value of an existing field.
-     * 
-     * @param propertyId id of the property
-     * @return id and value of the field
-     */
-    String[] getProperty(String propertyId);
-    
-    /**
-     * 
-     * @param propertyId id of the property
-     * @return 'true', if the property exists - else 'false'
-     */
-    boolean hasProperty(String propertyId);
-        
 }

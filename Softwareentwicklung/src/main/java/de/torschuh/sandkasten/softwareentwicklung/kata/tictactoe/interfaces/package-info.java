@@ -1,6 +1,6 @@
 /**
  * 
- * Interfaces for the TicTacToe-Game.
+ * Interfaces of the TicTacToe game.
  * 
  * @author Torsten
  *
