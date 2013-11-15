@@ -1,3 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pmd version="5.0.2" timestamp="2013-11-13T21:19:12.640">
+<pmd version="5.0.2" timestamp="2013-11-15T12:48:13.055">
+<file name="D:\Development\GIT\Sandkasten\Softwareentwicklung\src\main\java\de\torschuh\sandkasten\softwareentwicklung\kata\tictactoe\TicTacToe.java">
+<violation beginline="16" endline="16" begincolumn="28" endcolumn="36" rule="UnusedPrivateField" ruleset="Unused Code" package="de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe" class="TicTacToe" variable="endOfGame" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/unusedcode.html#UnusedPrivateField" priority="3">
+Avoid unused private fields such as 'endOfGame'.
+</violation>
+</file>
 </pmd>

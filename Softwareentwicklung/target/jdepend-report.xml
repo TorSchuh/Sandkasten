@@ -2,29 +2,30 @@
 <JDepend>
     <Packages>
 
-        <Package name="de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components">
+        <Package name="de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe">
             <Stats>
                 <TotalClasses>1</TotalClasses>
-                <ConcreteClasses>0</ConcreteClasses>
-                <AbstractClasses>1</AbstractClasses>
+                <ConcreteClasses>1</ConcreteClasses>
+                <AbstractClasses>0</AbstractClasses>
                 <Ca>0</Ca>
-                <Ce>1</Ce>
-                <A>1</A>
+                <Ce>2</Ce>
+                <A>0</A>
                 <I>1</I>
-                <D>1</D>
+                <D>0</D>
                 <V>1</V>
             </Stats>
 
             <AbstractClasses>
-                <Class sourceFile="package-info.java">
-                    de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.package-info
-                </Class>
             </AbstractClasses>
 
             <ConcreteClasses>
+                <Class sourceFile="TicTacToe.java">
+                    de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.TicTacToe
+                </Class>
             </ConcreteClasses>
 
             <DependsUpon>
+                <Package>de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.implementation</Package>
                 <Package>java.lang</Package>
             </DependsUpon>
 
@@ -37,11 +38,11 @@
                 <TotalClasses>3</TotalClasses>
                 <ConcreteClasses>0</ConcreteClasses>
                 <AbstractClasses>3</AbstractClasses>
-                <Ca>1</Ca>
+                <Ca>3</Ca>
                 <Ce>3</Ce>
                 <A>1</A>
-                <I>0.75</I>
-                <D>0.75</D>
+                <I>0.5</I>
+                <D>0.5</D>
                 <V>1</V>
             </Stats>
 
@@ -49,11 +50,11 @@
                 <Class sourceFile="AbstractField.java">
                     de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.abstraction.AbstractField
                 </Class>
+                <Class sourceFile="AbstractPlayboard.java">
+                    de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.abstraction.AbstractPlayboard
+                </Class>
                 <Class sourceFile="AbstractToken.java">
                     de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.abstraction.AbstractToken
-                </Class>
-                <Class sourceFile="package-info.java">
-                    de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.abstraction.package-info
                 </Class>
             </AbstractClasses>
 
@@ -68,37 +69,128 @@
 
             <UsedBy>
                 <Package>de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.implementation</Package>
+                <Package>de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.implementation.fields</Package>
+                <Package>de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.implementation.tokens</Package>
             </UsedBy>
         </Package>
 
         <Package name="de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.implementation">
             <Stats>
-                <TotalClasses>4</TotalClasses>
-                <ConcreteClasses>3</ConcreteClasses>
-                <AbstractClasses>1</AbstractClasses>
-                <Ca>0</Ca>
-                <Ce>2</Ce>
-                <A>0.25</A>
-                <I>1</I>
+                <TotalClasses>1</TotalClasses>
+                <ConcreteClasses>1</ConcreteClasses>
+                <AbstractClasses>0</AbstractClasses>
+                <Ca>1</Ca>
+                <Ce>5</Ce>
+                <A>0</A>
+                <I>0.83</I>
+                <D>0.17</D>
+                <V>1</V>
+            </Stats>
+
+            <AbstractClasses>
+            </AbstractClasses>
+
+            <ConcreteClasses>
+                <Class sourceFile="PlayboardTicTacToe.java">
+                    de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.implementation.PlayboardTicTacToe
+                </Class>
+            </ConcreteClasses>
+
+            <DependsUpon>
+                <Package>de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.abstraction</Package>
+                <Package>de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.implementation.fields</Package>
+                <Package>de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.interfaces</Package>
+                <Package>java.io</Package>
+                <Package>java.lang</Package>
+            </DependsUpon>
+
+            <UsedBy>
+                <Package>de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe</Package>
+            </UsedBy>
+        </Package>
+
+        <Package name="de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.implementation.fields">
+            <Stats>
+                <TotalClasses>9</TotalClasses>
+                <ConcreteClasses>9</ConcreteClasses>
+                <AbstractClasses>0</AbstractClasses>
+                <Ca>1</Ca>
+                <Ce>3</Ce>
+                <A>0</A>
+                <I>0.75</I>
                 <D>0.25</D>
                 <V>1</V>
             </Stats>
 
             <AbstractClasses>
-                <Class sourceFile="package-info.java">
-                    de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.implementation.package-info
+            </AbstractClasses>
+
+            <ConcreteClasses>
+                <Class sourceFile="FieldA1.java">
+                    de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.implementation.fields.FieldA1
                 </Class>
+                <Class sourceFile="FieldA2.java">
+                    de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.implementation.fields.FieldA2
+                </Class>
+                <Class sourceFile="FieldA3.java">
+                    de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.implementation.fields.FieldA3
+                </Class>
+                <Class sourceFile="FieldB1.java">
+                    de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.implementation.fields.FieldB1
+                </Class>
+                <Class sourceFile="FieldB2.java">
+                    de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.implementation.fields.FieldB2
+                </Class>
+                <Class sourceFile="FieldB3.java">
+                    de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.implementation.fields.FieldB3
+                </Class>
+                <Class sourceFile="FieldC1.java">
+                    de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.implementation.fields.FieldC1
+                </Class>
+                <Class sourceFile="FieldC2.java">
+                    de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.implementation.fields.FieldC2
+                </Class>
+                <Class sourceFile="FieldC3.java">
+                    de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.implementation.fields.FieldC3
+                </Class>
+            </ConcreteClasses>
+
+            <DependsUpon>
+                <Package>de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.abstraction</Package>
+                <Package>de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.implementation.tokens</Package>
+                <Package>de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.interfaces</Package>
+            </DependsUpon>
+
+            <UsedBy>
+                <Package>de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.implementation</Package>
+            </UsedBy>
+        </Package>
+
+        <Package name="de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.implementation.tokens">
+            <Stats>
+                <TotalClasses>3</TotalClasses>
+                <ConcreteClasses>3</ConcreteClasses>
+                <AbstractClasses>0</AbstractClasses>
+                <Ca>1</Ca>
+                <Ce>2</Ce>
+                <A>0</A>
+                <I>0.67</I>
+                <D>0.33</D>
+                <V>1</V>
+            </Stats>
+
+            <AbstractClasses>
             </AbstractClasses>
 
             <ConcreteClasses>
                 <Class sourceFile="TokenBlank.java">
-                    de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.implementation.TokenBlank
+                    de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.implementation.tokens.TokenBlank
                 </Class>
                 <Class sourceFile="TokenCircle.java">
-                    de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.implementation.TokenCircle
+                    de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.implementation.tokens.TokenCircle
                 </Class>
                 <Class sourceFile="TokenCross.java">
-                    de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.implementation.TokenCross
+                    de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.implementation.tokens.TokenCross
                 </Class>
             </ConcreteClasses>
 
@@ -108,19 +200,20 @@
             </DependsUpon>
 
             <UsedBy>
+                <Package>de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.implementation.fields</Package>
             </UsedBy>
         </Package>
 
         <Package name="de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.interfaces">
             <Stats>
-                <TotalClasses>8</TotalClasses>
+                <TotalClasses>7</TotalClasses>
                 <ConcreteClasses>2</ConcreteClasses>
-                <AbstractClasses>6</AbstractClasses>
-                <Ca>1</Ca>
+                <AbstractClasses>5</AbstractClasses>
+                <Ca>3</Ca>
                 <Ce>2</Ce>
-                <A>0.75</A>
-                <I>0.67</I>
-                <D>0.42</D>
+                <A>0.71</A>
+                <I>0.4</I>
+                <D>0.11</D>
                 <V>1</V>
             </Stats>
 
@@ -140,9 +233,6 @@
                 <Class sourceFile="Token.java">
                     de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.interfaces.Token
                 </Class>
-                <Class sourceFile="package-info.java">
-                    de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.interfaces.package-info
-                </Class>
             </AbstractClasses>
 
             <ConcreteClasses>
@@ -161,7 +251,13 @@
 
             <UsedBy>
                 <Package>de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.abstraction</Package>
+                <Package>de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.implementation</Package>
+                <Package>de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.implementation.fields</Package>
             </UsedBy>
+        </Package>
+
+        <Package name="java.io">
+            <error>No stats available: package referenced, but not analyzed.</error>
         </Package>
 
         <Package name="java.lang">
