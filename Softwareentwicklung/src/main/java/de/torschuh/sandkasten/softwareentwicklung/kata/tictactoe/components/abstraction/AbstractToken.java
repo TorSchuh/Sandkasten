@@ -14,7 +14,7 @@ public abstract class AbstractToken implements Token, TokenType {
     /**
      * Token represents a placeholder.
      */
-    public static final String TOKEN_BLANK = "B";
+    public static final String TOKEN_BLANK = " ";
     
     /**
      * Token represents a circle.
@@ -38,6 +38,6 @@ public abstract class AbstractToken implements Token, TokenType {
      *      kata.tictactoe.interfaces.Token#getTypeString()
      */
     @Override
-    public abstract String getTypeString();
+    public abstract String getTokenName();
     
 }

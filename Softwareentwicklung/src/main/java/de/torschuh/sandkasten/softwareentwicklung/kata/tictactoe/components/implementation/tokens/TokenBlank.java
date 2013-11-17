@@ -20,7 +20,7 @@ public class TokenBlank extends AbstractToken {
      * @see de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.abstraction.AbstractToken#getTypeString()
      */
     @Override
-    public final String getTypeString() {
+    public final String getTokenName() {
         return TOKEN_BLANK;
     }
 }

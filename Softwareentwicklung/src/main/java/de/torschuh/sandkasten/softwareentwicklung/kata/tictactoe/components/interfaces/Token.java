@@ -9,10 +9,10 @@ package de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.int
 public interface Token {
  
     /**
-     * Returns the type of the token as string.
+     * Returns the name of the token.
      * 
-     * @return Type of the token as string
+     * @return String name of the token
      */
-    String getTypeString();
+    String getTokenName();
     
 }

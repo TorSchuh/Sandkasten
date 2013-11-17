@@ -48,7 +48,7 @@ public abstract class AbstractField implements Field, Locatable {
     public final Token getToken() {
         return this.token;
     }
-
+    
     /* (non-Javadoc)
      * @see de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.interfaces.Field
      *      #setToken(de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.interfaces.Token)

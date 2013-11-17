@@ -1,5 +1,6 @@
 package de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.interfaces;
 
+
 /**
  * Field
  * 
@@ -16,7 +17,7 @@ public interface Field {
      * @return Token set token of the field
      */
     Token getToken();
-
+    
     /**
      * Sets the token of the field.
      * 

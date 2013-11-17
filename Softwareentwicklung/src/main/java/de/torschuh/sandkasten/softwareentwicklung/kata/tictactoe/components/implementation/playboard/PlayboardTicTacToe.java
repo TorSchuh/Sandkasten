@@ -13,6 +13,8 @@ import de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.impl
 import de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.interfaces.Locatable.Identifier;;
 
 /**
+ * Implementation for TicTacToe playboard.
+ * 
  * @author Torsten
  *
  */
@@ -37,19 +39,21 @@ public class PlayboardTicTacToe extends AbstractPlayboard {
      * Prints out the actual playboard.
      */
     public final void printPlayboard() {
-        System.out.println("     A       B       C");
-        System.out.println("");
-        System.out.println("1    " + this.getField(Identifier.A1).getToken().getTypeString() + "   " 
-                            + "|   " + this.getField(Identifier.B1).getToken().getTypeString() + "   |   " 
-                            + this.getField(Identifier.C1).getToken().getTypeString() + "  ");
-        System.out.println("   ----- + ----- + -----");
-        System.out.println("1    " + this.getField(Identifier.A2).getToken().getTypeString() + "   " 
-                + "|   " + this.getField(Identifier.B2).getToken().getTypeString() + "   |   " 
-                + this.getField(Identifier.C2).getToken().getTypeString() + "  ");
-        System.out.println("   ----- + ----- + -----");
-        System.out.println("1    " + this.getField(Identifier.A3).getToken().getTypeString() + "   " 
-                + "|   " + this.getField(Identifier.B3).getToken().getTypeString() + "   |   " 
-                + this.getField(Identifier.C3).getToken().getTypeString() + "  ");
+        System.out.println("#\n#");
+        System.out.println("#         A       B       C");
+        System.out.println("#    ");
+        System.out.println("#    1    " + this.getField(Identifier.A1).getToken().getTokenName() + "   " 
+                            + "|   " + this.getField(Identifier.B1).getToken().getTokenName() + "   |   " 
+                            + this.getField(Identifier.C1).getToken().getTokenName() + "  ");
+        System.out.println("#       ----- + ----- + -----");
+        System.out.println("#    2    " + this.getField(Identifier.A2).getToken().getTokenName() + "   " 
+                + "|   " + this.getField(Identifier.B2).getToken().getTokenName() + "   |   " 
+                + this.getField(Identifier.C2).getToken().getTokenName() + "  ");
+        System.out.println("#       ----- + ----- + -----");
+        System.out.println("#    3    " + this.getField(Identifier.A3).getToken().getTokenName() + "   " 
+                + "|   " + this.getField(Identifier.B3).getToken().getTokenName() + "   |   " 
+                + this.getField(Identifier.C3).getToken().getTokenName() + "  ");
+        System.out.println("#\n#");
     }
     
 }

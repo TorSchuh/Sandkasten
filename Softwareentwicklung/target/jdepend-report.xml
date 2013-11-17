@@ -8,7 +8,7 @@
                 <ConcreteClasses>1</ConcreteClasses>
                 <AbstractClasses>0</AbstractClasses>
                 <Ca>0</Ca>
-                <Ce>2</Ce>
+                <Ce>7</Ce>
                 <A>0</A>
                 <I>1</I>
                 <D>0</D>
@@ -25,7 +25,12 @@
             </ConcreteClasses>
 
             <DependsUpon>
-                <Package>de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.implementation</Package>
+                <Package>de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.abstraction</Package>
+                <Package>de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.implementation.playboard</Package>
+                <Package>de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.implementation.tokens</Package>
+                <Package>de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.interfaces</Package>
+                <Package>de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.game</Package>
+                <Package>java.io</Package>
                 <Package>java.lang</Package>
             </DependsUpon>
 
@@ -38,11 +43,11 @@
                 <TotalClasses>3</TotalClasses>
                 <ConcreteClasses>0</ConcreteClasses>
                 <AbstractClasses>3</AbstractClasses>
-                <Ca>3</Ca>
+                <Ca>5</Ca>
                 <Ce>3</Ce>
                 <A>1</A>
-                <I>0.5</I>
-                <D>0.5</D>
+                <I>0.38</I>
+                <D>0.38</D>
                 <V>1</V>
             </Stats>
 
@@ -68,44 +73,11 @@
             </DependsUpon>
 
             <UsedBy>
-                <Package>de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.implementation</Package>
-                <Package>de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.implementation.fields</Package>
-                <Package>de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.implementation.tokens</Package>
-            </UsedBy>
-        </Package>
-
-        <Package name="de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.implementation">
-            <Stats>
-                <TotalClasses>1</TotalClasses>
-                <ConcreteClasses>1</ConcreteClasses>
-                <AbstractClasses>0</AbstractClasses>
-                <Ca>1</Ca>
-                <Ce>5</Ce>
-                <A>0</A>
-                <I>0.83</I>
-                <D>0.17</D>
-                <V>1</V>
-            </Stats>
-
-            <AbstractClasses>
-            </AbstractClasses>
-
-            <ConcreteClasses>
-                <Class sourceFile="PlayboardTicTacToe.java">
-                    de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.implementation.PlayboardTicTacToe
-                </Class>
-            </ConcreteClasses>
-
-            <DependsUpon>
-                <Package>de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.abstraction</Package>
-                <Package>de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.implementation.fields</Package>
-                <Package>de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.interfaces</Package>
-                <Package>java.io</Package>
-                <Package>java.lang</Package>
-            </DependsUpon>
-
-            <UsedBy>
                 <Package>de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe</Package>
+                <Package>de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.implementation.fields</Package>
+                <Package>de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.implementation.playboard</Package>
+                <Package>de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.implementation.tokens</Package>
+                <Package>de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.game</Package>
             </UsedBy>
         </Package>
 
@@ -162,7 +134,43 @@
             </DependsUpon>
 
             <UsedBy>
-                <Package>de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.implementation</Package>
+                <Package>de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.implementation.playboard</Package>
+            </UsedBy>
+        </Package>
+
+        <Package name="de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.implementation.playboard">
+            <Stats>
+                <TotalClasses>1</TotalClasses>
+                <ConcreteClasses>1</ConcreteClasses>
+                <AbstractClasses>0</AbstractClasses>
+                <Ca>2</Ca>
+                <Ce>5</Ce>
+                <A>0</A>
+                <I>0.71</I>
+                <D>0.29</D>
+                <V>1</V>
+            </Stats>
+
+            <AbstractClasses>
+            </AbstractClasses>
+
+            <ConcreteClasses>
+                <Class sourceFile="PlayboardTicTacToe.java">
+                    de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.implementation.playboard.PlayboardTicTacToe
+                </Class>
+            </ConcreteClasses>
+
+            <DependsUpon>
+                <Package>de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.abstraction</Package>
+                <Package>de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.implementation.fields</Package>
+                <Package>de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.interfaces</Package>
+                <Package>java.io</Package>
+                <Package>java.lang</Package>
+            </DependsUpon>
+
+            <UsedBy>
+                <Package>de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe</Package>
+                <Package>de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.game</Package>
             </UsedBy>
         </Package>
 
@@ -171,11 +179,11 @@
                 <TotalClasses>3</TotalClasses>
                 <ConcreteClasses>3</ConcreteClasses>
                 <AbstractClasses>0</AbstractClasses>
-                <Ca>1</Ca>
-                <Ce>2</Ce>
+                <Ca>3</Ca>
+                <Ce>3</Ce>
                 <A>0</A>
-                <I>0.67</I>
-                <D>0.33</D>
+                <I>0.5</I>
+                <D>0.5</D>
                 <V>1</V>
             </Stats>
 
@@ -196,11 +204,14 @@
 
             <DependsUpon>
                 <Package>de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.abstraction</Package>
+                <Package>de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.interfaces</Package>
                 <Package>java.lang</Package>
             </DependsUpon>
 
             <UsedBy>
+                <Package>de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe</Package>
                 <Package>de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.implementation.fields</Package>
+                <Package>de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.game</Package>
             </UsedBy>
         </Package>
 
@@ -209,11 +220,11 @@
                 <TotalClasses>7</TotalClasses>
                 <ConcreteClasses>2</ConcreteClasses>
                 <AbstractClasses>5</AbstractClasses>
-                <Ca>3</Ca>
+                <Ca>6</Ca>
                 <Ce>2</Ce>
                 <A>0.71</A>
-                <I>0.4</I>
-                <D>0.11</D>
+                <I>0.25</I>
+                <D>0.04</D>
                 <V>1</V>
             </Stats>
 
@@ -224,14 +235,14 @@
                 <Class sourceFile="Locatable.java">
                     de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.interfaces.Locatable
                 </Class>
-                <Class sourceFile="Neighbours.java">
-                    de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.interfaces.Neighbours
-                </Class>
                 <Class sourceFile="Playboard.java">
                     de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.interfaces.Playboard
                 </Class>
                 <Class sourceFile="Token.java">
                     de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.interfaces.Token
+                </Class>
+                <Class sourceFile="TokenType.java">
+                    de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.interfaces.TokenType
                 </Class>
             </AbstractClasses>
 
@@ -239,8 +250,8 @@
                 <Class sourceFile="Locatable.java">
                     de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.interfaces.Locatable$Identifier
                 </Class>
-                <Class sourceFile="Neighbours.java">
-                    de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.interfaces.Neighbours$Direction
+                <Class sourceFile="TokenType.java">
+                    de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.interfaces.TokenType$Type
                 </Class>
             </ConcreteClasses>
 
@@ -250,9 +261,51 @@
             </DependsUpon>
 
             <UsedBy>
+                <Package>de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe</Package>
                 <Package>de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.abstraction</Package>
-                <Package>de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.implementation</Package>
                 <Package>de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.implementation.fields</Package>
+                <Package>de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.implementation.playboard</Package>
+                <Package>de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.implementation.tokens</Package>
+                <Package>de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.game</Package>
+            </UsedBy>
+        </Package>
+
+        <Package name="de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.game">
+            <Stats>
+                <TotalClasses>2</TotalClasses>
+                <ConcreteClasses>2</ConcreteClasses>
+                <AbstractClasses>0</AbstractClasses>
+                <Ca>1</Ca>
+                <Ce>6</Ce>
+                <A>0</A>
+                <I>0.86</I>
+                <D>0.14</D>
+                <V>1</V>
+            </Stats>
+
+            <AbstractClasses>
+            </AbstractClasses>
+
+            <ConcreteClasses>
+                <Class sourceFile="Gameplay.java">
+                    de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.game.Gameplay
+                </Class>
+                <Class sourceFile="Rules.java">
+                    de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.game.Rules
+                </Class>
+            </ConcreteClasses>
+
+            <DependsUpon>
+                <Package>de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.abstraction</Package>
+                <Package>de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.implementation.playboard</Package>
+                <Package>de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.implementation.tokens</Package>
+                <Package>de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.interfaces</Package>
+                <Package>java.lang</Package>
+                <Package>java.util</Package>
+            </DependsUpon>
+
+            <UsedBy>
+                <Package>de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe</Package>
             </UsedBy>
         </Package>
 

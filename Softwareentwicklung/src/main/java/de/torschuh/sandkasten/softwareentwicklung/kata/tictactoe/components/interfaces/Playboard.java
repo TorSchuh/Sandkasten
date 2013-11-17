@@ -1,5 +1,7 @@
 package de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.interfaces;
 
+import java.util.List;
+
 import de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.interfaces.Locatable.Identifier;
 
 
@@ -33,5 +35,17 @@ public interface Playboard {
      * @return Field field with the specified identifier
      */
     Field getField(Identifier pIdentifier);
+    
+    /**
+     * Returns list with fields.
+     * 
+     * @return List list with fields
+     */
+    List<Field> getFields();
+    
+    /**
+     * Prints out the actual playboard.
+     */
+    void printPlayboard();
     
 }

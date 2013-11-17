@@ -1,8 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pmd version="5.0.2" timestamp="2013-11-15T12:48:13.055">
+<pmd version="5.0.2" timestamp="2013-11-17T21:35:57.891">
 <file name="D:\Development\GIT\Sandkasten\Softwareentwicklung\src\main\java\de\torschuh\sandkasten\softwareentwicklung\kata\tictactoe\TicTacToe.java">
-<violation beginline="16" endline="16" begincolumn="28" endcolumn="36" rule="UnusedPrivateField" ruleset="Unused Code" package="de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe" class="TicTacToe" variable="endOfGame" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/unusedcode.html#UnusedPrivateField" priority="3">
-Avoid unused private fields such as 'endOfGame'.
+<violation beginline="43" endline="45" begincolumn="17" endcolumn="17" rule="CollapsibleIfStatements" ruleset="Basic" package="de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe" class="TicTacToe" method="main" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/basic.html#CollapsibleIfStatements" priority="3">
+These nested if statements could be combined
+</violation>
+</file>
+<file name="D:\Development\GIT\Sandkasten\Softwareentwicklung\src\main\java\de\torschuh\sandkasten\softwareentwicklung\kata\tictactoe\game\Gameplay.java">
+<violation beginline="18" endline="18" begincolumn="20" endcolumn="39" rule="UnusedPrivateField" ruleset="Unused Code" package="de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.game" class="Gameplay" variable="humanTokenTypeSymbol" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/unusedcode.html#UnusedPrivateField" priority="3">
+Avoid unused private fields such as 'humanTokenTypeSymbol'.
+</violation>
+<violation beginline="98" endline="98" begincolumn="91" endcolumn="101" rule="UnusedFormalParameter" ruleset="Unused Code" package="de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.game" class="Gameplay" method="isFinishingMove" variable="pIdentifier" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/unusedcode.html#UnusedFormalParameter" priority="3">
+Avoid unused method parameters such as 'pIdentifier'.
 </violation>
 </file>
 </pmd>
