@@ -2,7 +2,7 @@ package de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.game;
 
 import de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.abstraction.AbstractToken;
 import de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.implementation.playboard.PlayboardTicTacToe;
-import de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.interfaces.Locatable.Identifier;
+import de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.interfaces.Identifiable.Identifier;
 import de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.interfaces.TokenType.Type;
 
 public class Rules {

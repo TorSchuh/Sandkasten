@@ -1,7 +1,7 @@
 package de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.abstraction;
 
 import de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.interfaces.Field;
-import de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.interfaces.Locatable;
+import de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.interfaces.Identifiable;
 import de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.interfaces.Token;
 
 /**
@@ -10,7 +10,7 @@ import de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.inte
  * @author Torsten
  *
  */
-public abstract class AbstractField implements Field, Locatable {
+public abstract class AbstractField implements Field, Identifiable {
 
     /**
      * Unique identifier of the location.

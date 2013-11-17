@@ -2,8 +2,7 @@ package de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.int
 
 import java.util.List;
 
-import de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.interfaces.Locatable.Identifier;
-
+import de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.interfaces.Identifiable.Identifier;
 
 /**
  * Playboard
@@ -14,11 +13,6 @@ import de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.inte
  *
  */
 public interface Playboard {
-    
-    /**
-     * Cleares the playboard.
-     */
-    void clearPlayboard();
     
     /**
      * Adds a specified field to the playboard.

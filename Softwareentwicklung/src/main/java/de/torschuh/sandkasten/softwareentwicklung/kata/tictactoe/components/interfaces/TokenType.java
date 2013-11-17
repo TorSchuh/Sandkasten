@@ -1,7 +1,9 @@
 package de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.interfaces;
 
 /**
- * Interface to add the types to a token.
+ * TokenType
+ * 
+ * Interface to add types to the tokens.
  * 
  * @author Torsten
  *

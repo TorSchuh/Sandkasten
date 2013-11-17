@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Map;
 
 import de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.interfaces.Field;
-import de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.interfaces.Locatable.Identifier;
+import de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.interfaces.Identifiable.Identifier;
 import de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.interfaces.Playboard;
 
 /**
@@ -29,14 +29,6 @@ public abstract class AbstractPlayboard implements Playboard {
      * Map with all neighbouring fields and there direction.
      */
     private final Map<Identifier, Field> fields = new HashMap<Identifier, Field>();
-    
-    /* (non-Javadoc)
-     * @see de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.interfaces.Playboard#clearPlayboard()
-     */
-    @Override
-    public final void clearPlayboard() {
-        this.fields.clear();
-    }
 
     /* (non-Javadoc)
      * @see de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.interfaces.Playboard

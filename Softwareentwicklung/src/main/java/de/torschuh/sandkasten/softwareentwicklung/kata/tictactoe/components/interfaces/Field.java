@@ -1,6 +1,5 @@
 package de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.interfaces;
 
-
 /**
  * Field
  * 
@@ -12,16 +11,16 @@ package de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.int
 public interface Field {
 
     /**
-     * Returns the set token.
+     * Returns the placed token.
      * 
-     * @return Token set token of the field
+     * @return Token placed token of the field
      */
     Token getToken();
     
     /**
-     * Sets the token of the field.
+     * Places the token of the field.
      * 
-     * @param pToken token to set 
+     * @param pToken token to place 
      */
     void setToken(Token pToken);
     

@@ -6,7 +6,7 @@ import de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.impl
 import de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.implementation.tokens.TokenCircle;
 import de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.implementation.tokens.TokenCross;
 import de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.interfaces.Field;
-import de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.interfaces.Locatable.Identifier;
+import de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.interfaces.Identifiable.Identifier;
 import de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.interfaces.Token;
 import de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.interfaces.TokenType;
 import de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.interfaces.TokenType.Type;
