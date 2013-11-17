@@ -21,16 +21,16 @@ public interface Playboard {
     /**
      * Adds a specified field to the playboard.
      * 
+     * @param pIdentifier identifier of the field
      * @param pField field to add to the playboard
      */
-    void addField(Field pField);
+    void addField(final Identifier pIdentifier, Field pField);
     
     /**
      * Returns field with the specified identifier.
      * 
      * @param pIdentifier 
      * @return Field field with the specified identifier
-     * @throws Exception 
      */
     Field getField(Identifier pIdentifier);
     

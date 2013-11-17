@@ -1,5 +1,4 @@
 /**
- * 
  * Abstract classes of the TicTacToe game.
  * 
  * @author Torsten

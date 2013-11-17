@@ -14,7 +14,7 @@ public abstract class AbstractToken implements Token, TokenType {
     /**
      * Token represents a placeholder.
      */
-    public static final String TOKEN_BLANK = " ";
+    public static final String TOKEN_BLANK = "B";
     
     /**
      * Token represents a circle.

@@ -1,6 +1,5 @@
 package de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.interfaces;
 
-
 /**
  * Field
  * 

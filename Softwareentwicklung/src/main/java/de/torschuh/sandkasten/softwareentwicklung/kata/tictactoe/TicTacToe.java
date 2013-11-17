@@ -1,6 +1,6 @@
 package de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe;
 
-import de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.implementation.PlayboardTicTacToe;
+import de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.implementation.playboard.PlayboardTicTacToe;
 
 /**
  * TicTacToe game.
