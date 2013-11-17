@@ -32,6 +32,6 @@ public interface Playboard {
      * @return Field field with the specified identifier
      * @throws Exception 
      */
-    Field getField(Identifier pIdentifier) throws Exception;
+    Field getField(Identifier pIdentifier);
     
 }

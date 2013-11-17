@@ -1,6 +1,3 @@
-/**
- * 
- */
 package de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.implementation.tokens;
 
 import de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.abstraction.AbstractToken;
@@ -15,8 +12,16 @@ public class TokenCross extends AbstractToken {
      * @see de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.abstraction.AbstractToken#getType()
      */
     @Override
-    public final String getType() {
-        return TOKEN_CROSS;
+    public final Type getType() {
+        return Type.CROSS;
     }
 
+    /* (non-Javadoc)
+     * @see de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.abstraction.AbstractToken#getTypeString()
+     */
+    @Override
+    public final String getTypeString() {
+        return TOKEN_CROSS;
+    }
+    
 }

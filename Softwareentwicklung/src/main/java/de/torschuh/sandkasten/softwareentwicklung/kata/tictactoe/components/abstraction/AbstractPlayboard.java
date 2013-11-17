@@ -42,13 +42,13 @@ public abstract class AbstractPlayboard implements Playboard {
      *      #getField(de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.interfaces.Field)
      */
     @Override
-    public final Field getField(final Identifier pIdentifier) throws Exception {
+    public final Field getField(final Identifier pIdentifier) {
         for (Field field : fields) {
             if (((AbstractField) field).getIdentifier().equals(pIdentifier)) {
                 return field;
             }
         }
-        throw new Exception();
+        return null;
     }
     
 }

@@ -1,6 +1,3 @@
-/**
- * 
- */
 package de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.implementation.tokens;
 
 import de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.abstraction.AbstractToken;
@@ -15,8 +12,15 @@ public class TokenCircle extends AbstractToken {
      * @see de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.abstraction.AbstractToken#getType()
      */
     @Override
-    public final String getType() {
-        return TOKEN_CIRCLE;
+    public final Type getType() {
+        return Type.CIRCLE;
     }
 
+    /* (non-Javadoc)
+     * @see de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.abstraction.AbstractToken#getTypeString()
+     */
+    @Override
+    public final String getTypeString() {
+        return TOKEN_CIRCLE;
+    }
 }

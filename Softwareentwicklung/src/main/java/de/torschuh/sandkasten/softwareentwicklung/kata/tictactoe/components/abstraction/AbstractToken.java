@@ -1,6 +1,7 @@
 package de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.abstraction;
 
 import de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.interfaces.Token;
+import de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.interfaces.TokenType;
 
 /**
  * Represents a token for a TicTacToe playboard.
@@ -8,7 +9,7 @@ import de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.inte
  * @author Torsten
  *
  */
-public abstract class AbstractToken implements Token {
+public abstract class AbstractToken implements Token, TokenType {
     
     /**
      * Token represents a placeholder.
@@ -30,6 +31,13 @@ public abstract class AbstractToken implements Token {
      *      kata.tictactoe.interfaces.Token#getType()
      */
     @Override
-    public abstract String getType();
+    public abstract Type getType();
 
+    /* (non-Javadoc)
+     * @see de.torschuh.sandkasten.softwareentwicklung.
+     *      kata.tictactoe.interfaces.Token#getTypeString()
+     */
+    @Override
+    public abstract String getTypeString();
+    
 }
