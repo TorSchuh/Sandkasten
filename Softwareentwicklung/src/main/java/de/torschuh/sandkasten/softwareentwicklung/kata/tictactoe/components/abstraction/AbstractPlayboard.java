@@ -29,8 +29,7 @@ public abstract class AbstractPlayboard implements Playboard {
      */
     @Override
     public abstract Field getField(final Identifier pIdentifier);
-    
-    
+        
     /* (non-Javadoc)
      * @see de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.interfaces.Playboard#getFields()
      */

@@ -11,12 +11,6 @@ import de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.inte
  *
  */
 public abstract class AbstractField implements Field, FieldIdentifiable {
-
-    /**
-     * Default constructor to create a field.
-     */
-    public AbstractField() {
-    }
     
     /* (non-Javadoc)
      * @see de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.interfaces.Locatable#getIdentifier()

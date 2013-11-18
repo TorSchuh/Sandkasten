@@ -13,12 +13,6 @@ import de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.inte
  */
 public abstract class AbstractToken implements Token, TokenTypeable {
     
-    /**
-     * Default constructor to create token.
-     */
-    public AbstractToken() {
-    }
-    
     /* (non-Javadoc)
      * @see de.torschuh.sandkasten.softwareentwicklung.
      *      kata.tictactoe.interfaces.Token#getType()

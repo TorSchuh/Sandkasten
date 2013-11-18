@@ -4,11 +4,10 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-import de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.interfaces.FieldIdentifiable.Identifier;
-import de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.abstraction.AbstractToken;
 import de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.implementation.TicTacToePlayboard;
-import de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.implementation.tokens.TokenCircle;
-import de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.implementation.tokens.TokenCross;
+import de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.implementation.TicTacToeToken;
+import de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.interfaces.FieldIdentifiable.Identifier;
+import de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.interfaces.TokenTypeable.Type;
 import de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.game.Gameplay;
 
 /**
@@ -17,14 +16,20 @@ import de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.game.Gameplay;
  * @author Torsten
  *
  */
-public class TicTacToe {
+public final class TicTacToe {
+    
+    /**
+     * Private default constructor.
+     */
+    private TicTacToe() {
+    }
     
     /**
      * Starts TicTacToe game.
      * 
      * @param args Parameter for main method
      */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         
         printHeadline();
         
@@ -90,9 +95,9 @@ public class TicTacToe {
         String symbol = "";
         try {
             do {
-                System.out.print("#\n#\n#--> please choose your symbol ( "+AbstractToken.TOKEN_CIRCLE+" or "+AbstractToken.TOKEN_CROSS+" ) : ");
+                System.out.print("#\n#\n#--> please choose your symbol ( "+TicTacToeToken.TOKEN_CIRCLE+" or "+TicTacToeToken.TOKEN_CROSS+" ) : ");
                 symbol = input.readLine().trim().toUpperCase();    
-                if (symbol.equals(AbstractToken.TOKEN_CIRCLE) || symbol.equals(AbstractToken.TOKEN_CROSS)) {
+                if (symbol.equals(TicTacToeToken.TOKEN_CIRCLE) || symbol.equals(TicTacToeToken.TOKEN_CROSS)) {
                     System.out.print("#\n#\n#    Human: "+getHumanToken(symbol).getTokenName()+"  vs. Computer: "+getComputerToken(symbol).getTokenName()+"\n");
                     symbolAccepted = true;
                 }
@@ -122,12 +127,12 @@ public class TicTacToe {
         return Identifier.valueOf(identifier);
     }
     
-    private static AbstractToken getHumanToken(String pHumanTokenTypeSymbol) {
-        return pHumanTokenTypeSymbol.equals(AbstractToken.TOKEN_CIRCLE) ? new TokenCircle() : new TokenCross();
+    private static TicTacToeToken getHumanToken(String pHumanTokenTypeSymbol) {
+        return pHumanTokenTypeSymbol.equals(TicTacToeToken.TOKEN_CIRCLE) ? new TicTacToeToken(Type.CIRCLE, TicTacToeToken.TOKEN_CIRCLE) : new TicTacToeToken(Type.CROSS, TicTacToeToken.TOKEN_CROSS);
     }
     
-    private static AbstractToken getComputerToken(String pHumanTokenTypeSymbol) {
-        return pHumanTokenTypeSymbol.equals(AbstractToken.TOKEN_CIRCLE) ? new TokenCross() : new TokenCircle();
+    private static TicTacToeToken getComputerToken(String pHumanTokenTypeSymbol) {
+        return pHumanTokenTypeSymbol.equals(TicTacToeToken.TOKEN_CIRCLE) ? new TicTacToeToken(Type.CROSS, TicTacToeToken.TOKEN_CROSS) : new TicTacToeToken(Type.CIRCLE, TicTacToeToken.TOKEN_CIRCLE);
     }
     
     private static void printHeadline() {

@@ -25,11 +25,11 @@ public interface Playboard {
     /**
      * Returns field with the specified identifier.
      * 
-     * @param pIdentifier 
+     * @param pIdentifier identifier of the field
      * @return Field field with the specified identifier
      */
     Field getField(Identifier pIdentifier);
-    
+
     /**
      * Returns list with fields.
      * 

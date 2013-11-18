@@ -1,9 +1,9 @@
 package de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.implementation;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 import de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.abstraction.AbstractPlayboard;
 import de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.interfaces.Field;
@@ -23,12 +23,13 @@ public class TicTacToePlayboard extends AbstractPlayboard {
     /**
      * Map with all neighbouring fields and there direction.
      */
-    private Map<Identifier, Field> fields = new HashMap<Identifier, Field>();
+    private final Map<Identifier, Field> fields = new ConcurrentHashMap<Identifier, Field>();
 
     /**
      * Default constructor to create fields with blank tokens.
      */
     public TicTacToePlayboard() {        
+        super();
         this.addField(Identifier.A1, new TicTacToeField(new TicTacToeToken(Type.BLANK, TicTacToeToken.TOKEN_BLANK), Identifier.A1));
         this.addField(Identifier.A2, new TicTacToeField(new TicTacToeToken(Type.BLANK, TicTacToeToken.TOKEN_BLANK), Identifier.A2));
         this.addField(Identifier.A3, new TicTacToeField(new TicTacToeToken(Type.BLANK, TicTacToeToken.TOKEN_BLANK), Identifier.A3));
@@ -57,8 +58,7 @@ public class TicTacToePlayboard extends AbstractPlayboard {
     public final Field getField(final Identifier pIdentifier) {
         return this.fields.get(pIdentifier);
     }
-    
-    
+        
     /* (non-Javadoc)
      * @see de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.interfaces.Playboard#getFields()
      */

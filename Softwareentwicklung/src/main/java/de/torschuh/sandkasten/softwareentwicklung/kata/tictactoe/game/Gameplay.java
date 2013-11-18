@@ -3,8 +3,7 @@ package de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.game;
 import de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.abstraction.AbstractField;
 import de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.abstraction.AbstractToken;
 import de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.implementation.TicTacToePlayboard;
-import de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.implementation.tokens.TokenCircle;
-import de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.implementation.tokens.TokenCross;
+import de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.implementation.TicTacToeToken;
 import de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.interfaces.Field;
 import de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.interfaces.FieldIdentifiable.Identifier;
 import de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.interfaces.Token;
@@ -45,9 +44,9 @@ public class Gameplay {
         for (Field field : pPlayboard.getFields()) {
             AbstractField fieldTmp = (AbstractField) field;
             Token tokenTmp = fieldTmp.getToken();
-            AbstractToken tokenOpponent = new TokenCircle();
+            AbstractToken tokenOpponent = new TicTacToeToken(Type.CIRCLE, TicTacToeToken.TOKEN_CIRCLE);
             if (pToken.getType().equals(TokenTypeable.Type.CIRCLE)) {
-                tokenOpponent = new TokenCross();
+                tokenOpponent = new TicTacToeToken(Type.CROSS, TicTacToeToken.TOKEN_CROSS);
             }
             if (isValidMove(pPlayboard, fieldTmp.getIdentifier())) {
                 fieldTmp.setToken(tokenOpponent);
@@ -98,7 +97,7 @@ public class Gameplay {
     
     public boolean hasBlankFields(final TicTacToePlayboard pPlayboard) {
         for (Field field : pPlayboard.getFields()) {
-            if (field.getToken().getTokenName().equals(AbstractToken.TOKEN_BLANK)) {
+            if (field.getToken().getTokenName().equals(TicTacToeToken.TOKEN_BLANK)) {
                 return true;
             }
         }
@@ -106,10 +105,10 @@ public class Gameplay {
     }
     
     private boolean isFinishingMove(final TicTacToePlayboard pPlayboard, final Identifier pIdentifier, final AbstractToken pToken) {
-        return Rules.isSameToken_A1_A2_A3(pPlayboard, pToken.getType()) || Rules.isSameToken_A1_B1_C1(pPlayboard, pToken.getType())
-                || Rules.isSameToken_A1_B2_C3(pPlayboard, pToken.getType()) || Rules.isSameToken_A2_B2_C2(pPlayboard, pToken.getType())
-                || Rules.isSameToken_A3_B3_C3(pPlayboard, pToken.getType()) || Rules.isSameToken_B1_B2_B3(pPlayboard, pToken.getType())
-                || Rules.isSameToken_C1_B2_A3(pPlayboard, pToken.getType()) || Rules.isSameToken_C1_C2_C3(pPlayboard, pToken.getType());
+        return Rules.isSameTokenA1A2A3(pPlayboard, pToken.getType()) || Rules.isSameTokenA1B1C1(pPlayboard, pToken.getType())
+                || Rules.isSameTokenA1B2C3(pPlayboard, pToken.getType()) || Rules.isSameTokenA2B2C2(pPlayboard, pToken.getType())
+                || Rules.isSameTokenA3B3C3(pPlayboard, pToken.getType()) || Rules.isSameTokenB1B2B3(pPlayboard, pToken.getType())
+                || Rules.isSameTokenC1B2A3(pPlayboard, pToken.getType()) || Rules.isSameTokenC1C2C3(pPlayboard, pToken.getType());
     }
 
     private boolean isComputerFirst() {
