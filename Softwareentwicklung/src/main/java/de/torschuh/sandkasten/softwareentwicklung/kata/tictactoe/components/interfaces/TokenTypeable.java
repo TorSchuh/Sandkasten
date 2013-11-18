@@ -8,7 +8,7 @@ package de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.int
  * @author Torsten
  *
  */
-public interface TokenType {
+public interface TokenTypeable {
     
     /**
      * Type enumeration of the available tokens. 

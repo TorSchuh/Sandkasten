@@ -2,14 +2,14 @@ package de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.game;
 
 import de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.abstraction.AbstractField;
 import de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.abstraction.AbstractToken;
-import de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.implementation.playboard.PlayboardTicTacToe;
+import de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.implementation.TicTacToePlayboard;
 import de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.implementation.tokens.TokenCircle;
 import de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.implementation.tokens.TokenCross;
 import de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.interfaces.Field;
-import de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.interfaces.Identifiable.Identifier;
+import de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.interfaces.FieldIdentifiable.Identifier;
 import de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.interfaces.Token;
-import de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.interfaces.TokenType;
-import de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.interfaces.TokenType.Type;
+import de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.interfaces.TokenTypeable;
+import de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.interfaces.TokenTypeable.Type;
 
 public class Gameplay {
 
@@ -25,7 +25,7 @@ public class Gameplay {
         this.isComputerNext = pComputerIsNext;
     }
     
-    public boolean moveComputer(PlayboardTicTacToe pPlayboard, AbstractToken pToken) {      
+    public boolean moveComputer(TicTacToePlayboard pPlayboard, AbstractToken pToken) {      
         
         // test if computer can win
         for (Field field : pPlayboard.getFields()) {
@@ -46,7 +46,7 @@ public class Gameplay {
             AbstractField fieldTmp = (AbstractField) field;
             Token tokenTmp = fieldTmp.getToken();
             AbstractToken tokenOpponent = new TokenCircle();
-            if (pToken.getType().equals(TokenType.Type.CIRCLE)) {
+            if (pToken.getType().equals(TokenTypeable.Type.CIRCLE)) {
                 tokenOpponent = new TokenCross();
             }
             if (isValidMove(pPlayboard, fieldTmp.getIdentifier())) {
@@ -60,7 +60,7 @@ public class Gameplay {
         }
         
         // test if center field is empty
-        if (((AbstractToken) pPlayboard.getField(Identifier.B2).getToken()).getType().equals(TokenType.Type.BLANK)) {
+        if (((AbstractToken) pPlayboard.getField(Identifier.B2).getToken()).getType().equals(TokenTypeable.Type.BLANK)) {
             pPlayboard.getField(Identifier.B2).setToken(pToken);
             return true;
         }
@@ -81,7 +81,7 @@ public class Gameplay {
         return false;
     }
     
-    public boolean moveHuman(PlayboardTicTacToe pPlayboard, AbstractToken pToken, Identifier pIdentifier) {
+    public boolean moveHuman(TicTacToePlayboard pPlayboard, AbstractToken pToken, Identifier pIdentifier) {
         if (isValidMove(pPlayboard, pIdentifier)) {
             pPlayboard.getField(pIdentifier).setToken(pToken);
             if (isFinishingMove(pPlayboard, pIdentifier, pToken)) {
@@ -92,11 +92,11 @@ public class Gameplay {
         return false;
     }
     
-    public boolean isValidMove(final PlayboardTicTacToe pPlayboard, final Identifier pIdentifier) {
+    public boolean isValidMove(final TicTacToePlayboard pPlayboard, final Identifier pIdentifier) {
         return ((AbstractToken) pPlayboard.getField(pIdentifier).getToken()).getType().equals(Type.BLANK);
     }
     
-    public boolean hasBlankFields(final PlayboardTicTacToe pPlayboard) {
+    public boolean hasBlankFields(final TicTacToePlayboard pPlayboard) {
         for (Field field : pPlayboard.getFields()) {
             if (field.getToken().getTokenName().equals(AbstractToken.TOKEN_BLANK)) {
                 return true;
@@ -105,7 +105,7 @@ public class Gameplay {
         return false;
     }
     
-    private boolean isFinishingMove(final PlayboardTicTacToe pPlayboard, final Identifier pIdentifier, final AbstractToken pToken) {
+    private boolean isFinishingMove(final TicTacToePlayboard pPlayboard, final Identifier pIdentifier, final AbstractToken pToken) {
         return Rules.isSameToken_A1_A2_A3(pPlayboard, pToken.getType()) || Rules.isSameToken_A1_B1_C1(pPlayboard, pToken.getType())
                 || Rules.isSameToken_A1_B2_C3(pPlayboard, pToken.getType()) || Rules.isSameToken_A2_B2_C2(pPlayboard, pToken.getType())
                 || Rules.isSameToken_A3_B3_C3(pPlayboard, pToken.getType()) || Rules.isSameToken_B1_B2_B3(pPlayboard, pToken.getType())

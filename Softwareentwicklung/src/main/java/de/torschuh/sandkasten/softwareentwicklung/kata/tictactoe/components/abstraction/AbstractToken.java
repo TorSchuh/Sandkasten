@@ -1,30 +1,23 @@
 package de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.abstraction;
 
 import de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.interfaces.Token;
-import de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.interfaces.TokenType;
+import de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.interfaces.TokenTypeable;
 
 /**
- * Represents a token for a TicTacToe playboard.
+ * AbstractToken
+ * 
+ * Represents a token for a playboard.
  * 
  * @author Torsten
  *
  */
-public abstract class AbstractToken implements Token, TokenType {
+public abstract class AbstractToken implements Token, TokenTypeable {
     
     /**
-     * Token represents a placeholder.
+     * Default constructor to create token.
      */
-    public static final String TOKEN_BLANK = " ";
-    
-    /**
-     * Token represents a circle.
-     */
-    public static final String TOKEN_CIRCLE = "O";
-    
-    /**
-     * Token represents a cross.
-     */
-    public static final String TOKEN_CROSS = "X";
+    public AbstractToken() {
+    }
     
     /* (non-Javadoc)
      * @see de.torschuh.sandkasten.softwareentwicklung.

@@ -2,7 +2,7 @@ package de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.int
 
 import java.util.List;
 
-import de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.interfaces.Identifiable.Identifier;
+import de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.interfaces.FieldIdentifiable.Identifier;
 
 /**
  * Playboard

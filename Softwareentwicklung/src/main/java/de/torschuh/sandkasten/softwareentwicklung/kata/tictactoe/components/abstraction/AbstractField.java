@@ -1,7 +1,7 @@
 package de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.abstraction;
 
 import de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.interfaces.Field;
-import de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.interfaces.Identifiable;
+import de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.interfaces.FieldIdentifiable;
 import de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.interfaces.Token;
 
 /**
@@ -10,52 +10,31 @@ import de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.inte
  * @author Torsten
  *
  */
-public abstract class AbstractField implements Field, Identifiable {
+public abstract class AbstractField implements Field, FieldIdentifiable {
 
     /**
-     * Unique identifier of the location.
+     * Default constructor to create a field.
      */
-    private final Identifier identifier;
-    
-    /**
-     * Token on the field.
-     */
-    private Token token;
-    
-    /**
-     * Standard constructor to create Field.
-     * 
-     * @param pToken token to set 
-     * @param pIdentifier identifier to set
-     */
-    public AbstractField(final Token pToken, final Identifier pIdentifier) {
-        this.token = pToken;
-        this.identifier = pIdentifier;
+    public AbstractField() {
     }
     
     /* (non-Javadoc)
      * @see de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.interfaces.Locatable#getIdentifier()
      */
     @Override
-    public final Identifier getIdentifier() {
-        return this.identifier;
-    }
+    public abstract Identifier getIdentifier();
 
     /* (non-Javadoc)
      * @see de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.interfaces.Field#getToken()
      */
     @Override
-    public final Token getToken() {
-        return this.token;
-    }
+    public abstract Token getToken();
     
     /* (non-Javadoc)
      * @see de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.interfaces.Field
      *      #setToken(de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.interfaces.Token)
      */
     @Override
-    public final void setToken(final Token pToken) {
-        this.token = pToken;
-    }
+    public abstract void setToken(final Token pToken);
 
 }

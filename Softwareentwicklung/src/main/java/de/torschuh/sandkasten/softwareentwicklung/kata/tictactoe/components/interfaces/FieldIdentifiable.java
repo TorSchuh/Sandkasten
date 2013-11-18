@@ -8,7 +8,7 @@ package de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.int
  * @author Torsten
  *
  */
-public interface Identifiable {
+public interface FieldIdentifiable {
     
     /**
      * Identifier enumeration of the available identities. 

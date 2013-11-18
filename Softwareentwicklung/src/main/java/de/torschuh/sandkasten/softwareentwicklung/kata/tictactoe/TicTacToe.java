@@ -4,9 +4,9 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-import de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.interfaces.Identifiable.Identifier;
+import de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.interfaces.FieldIdentifiable.Identifier;
 import de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.abstraction.AbstractToken;
-import de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.implementation.playboard.PlayboardTicTacToe;
+import de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.implementation.TicTacToePlayboard;
 import de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.implementation.tokens.TokenCircle;
 import de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.implementation.tokens.TokenCross;
 import de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.game.Gameplay;
@@ -29,7 +29,7 @@ public class TicTacToe {
         printHeadline();
         
         Gameplay gameplay = new Gameplay(); 
-        PlayboardTicTacToe playboard = new PlayboardTicTacToe();
+        TicTacToePlayboard playboard = new TicTacToePlayboard();
         String humanTokenTypeSymbol = askForHumanTokenType();
         boolean endOfGame = false;
                 
@@ -59,7 +59,7 @@ public class TicTacToe {
                 endOfGame = !askForRematch();
                 if (!endOfGame) {
                     gameplay = new Gameplay(); 
-                    playboard = new PlayboardTicTacToe();
+                    playboard = new TicTacToePlayboard();
                     humanTokenTypeSymbol = askForHumanTokenType();
                 }
             }
@@ -104,7 +104,7 @@ public class TicTacToe {
         return symbol;
     }
     
-    private static Identifier askForHumanNextMove(Gameplay pGameplay, PlayboardTicTacToe pPlayboard) {
+    private static Identifier askForHumanNextMove(Gameplay pGameplay, TicTacToePlayboard pPlayboard) {
         BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
         boolean identifierAccepted = false;
         String identifier = ""; 
