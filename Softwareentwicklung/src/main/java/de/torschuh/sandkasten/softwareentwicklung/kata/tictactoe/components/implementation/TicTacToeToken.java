@@ -25,7 +25,7 @@ public class TicTacToeToken extends AbstractToken {
     /**
      * Token represents a placeholder.
      */
-    public static final String TOKEN_BLANK = "B";
+    public static final String TOKEN_BLANK = " ";
     
     /**
      * Token represents a circle.

@@ -1,7 +1,6 @@
 package de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.game;
 
 import de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.abstraction.AbstractField;
-import de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.abstraction.AbstractToken;
 import de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.implementation.TicTacToePlayboard;
 import de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.implementation.TicTacToeToken;
 import de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.interfaces.Field;
@@ -10,21 +9,55 @@ import de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.inte
 import de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.interfaces.TokenTypeable;
 import de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.interfaces.TokenTypeable.Type;
 
+/**
+ * Gameplay 
+ * 
+ * Methods for playing the game.
+ * 
+ * @author Torsten
+ *
+ */
 public class Gameplay {
 
-    private boolean isComputerNext = false;
-    private boolean isFinishedGame = false;
-    private String humanTokenTypeSymbol = "";
+    /**
+     * Is computer next.
+     */
+    private boolean isComputerNext;
     
+    /**
+     * Is game finished.
+     */
+    private boolean isFinishedGame;
+    
+    /**
+     * The half.
+     */
+    private static final double FIVEPOINTZERO = 0.5;
+    
+    /**
+     * Default constructor.
+     */
     public Gameplay() {
         this.isComputerNext = isComputerFirst();
     }
     
-    public void setComputerNext(boolean pComputerIsNext) {
+    /**
+     * Set if the computer is next.
+     * 
+     * @param pComputerIsNext if computer is next
+     */
+    public final void setComputerNext(final boolean pComputerIsNext) {
         this.isComputerNext = pComputerIsNext;
     }
     
-    public boolean moveComputer(TicTacToePlayboard pPlayboard, AbstractToken pToken) {      
+    /**
+     * Moves computer token.
+     * 
+     * @param pPlayboard actual playboard
+     * @param pToken token of the player
+     * @return true if move was successful
+     */
+    public final boolean moveComputer(final TicTacToePlayboard pPlayboard, final TicTacToeToken pToken) {      
         
         // test if computer can win
         for (Field field : pPlayboard.getFields()) {
@@ -32,7 +65,7 @@ public class Gameplay {
             Token tokenTmp = fieldTmp.getToken();
             if (isValidMove(pPlayboard, fieldTmp.getIdentifier())) {
                 fieldTmp.setToken(pToken);
-                if (isFinishingMove(pPlayboard, ((AbstractField) field).getIdentifier(), pToken)) {
+                if (isFinishingMove(pPlayboard, pToken)) {
                     this.isFinishedGame = true;
                     return true;
                 }
@@ -44,13 +77,13 @@ public class Gameplay {
         for (Field field : pPlayboard.getFields()) {
             AbstractField fieldTmp = (AbstractField) field;
             Token tokenTmp = fieldTmp.getToken();
-            AbstractToken tokenOpponent = new TicTacToeToken(Type.CIRCLE, TicTacToeToken.TOKEN_CIRCLE);
+            TicTacToeToken tokenOpponent = new TicTacToeToken(Type.CIRCLE, TicTacToeToken.TOKEN_CIRCLE);
             if (pToken.getType().equals(TokenTypeable.Type.CIRCLE)) {
                 tokenOpponent = new TicTacToeToken(Type.CROSS, TicTacToeToken.TOKEN_CROSS);
             }
             if (isValidMove(pPlayboard, fieldTmp.getIdentifier())) {
                 fieldTmp.setToken(tokenOpponent);
-                if (isFinishingMove(pPlayboard, ((AbstractField) field).getIdentifier(), tokenOpponent)) {
+                if (isFinishingMove(pPlayboard, tokenOpponent)) {
                     fieldTmp.setToken(pToken);
                     return true;
                 }
@@ -59,7 +92,7 @@ public class Gameplay {
         }
         
         // test if center field is empty
-        if (((AbstractToken) pPlayboard.getField(Identifier.B2).getToken()).getType().equals(TokenTypeable.Type.BLANK)) {
+        if (((TicTacToeToken) pPlayboard.getField(Identifier.B2).getToken()).getType().equals(TokenTypeable.Type.BLANK)) {
             pPlayboard.getField(Identifier.B2).setToken(pToken);
             return true;
         }
@@ -80,10 +113,20 @@ public class Gameplay {
         return false;
     }
     
-    public boolean moveHuman(TicTacToePlayboard pPlayboard, AbstractToken pToken, Identifier pIdentifier) {
+    
+    
+    /**
+     * Moves human token.
+     * 
+     * @param pPlayboard actual playboard
+     * @param pToken token of the player
+     * @param pIdentifier identifier for the move
+     * @return true if move was successful
+     */
+    public final boolean moveHuman(final TicTacToePlayboard pPlayboard, final TicTacToeToken pToken, final Identifier pIdentifier) {
         if (isValidMove(pPlayboard, pIdentifier)) {
             pPlayboard.getField(pIdentifier).setToken(pToken);
-            if (isFinishingMove(pPlayboard, pIdentifier, pToken)) {
+            if (isFinishingMove(pPlayboard, pToken)) {
                 this.isFinishedGame = true;
             }
             return true;
@@ -91,35 +134,71 @@ public class Gameplay {
         return false;
     }
     
-    public boolean isValidMove(final TicTacToePlayboard pPlayboard, final Identifier pIdentifier) {
-        return ((AbstractToken) pPlayboard.getField(pIdentifier).getToken()).getType().equals(Type.BLANK);
+    /**
+     * Is the move valid.
+     * 
+     * @param pPlayboard actual playboard
+     * @param pIdentifier identifier for the move
+     * @return true if it is a valid move
+     */
+    public final boolean isValidMove(final TicTacToePlayboard pPlayboard, final Identifier pIdentifier) {
+        return ((TicTacToeToken) pPlayboard.getField(pIdentifier).getToken()).getType().equals(Type.BLANK);
     }
     
-    public boolean hasBlankFields(final TicTacToePlayboard pPlayboard) {
-        for (Field field : pPlayboard.getFields()) {
+    /**
+     * Has the playboard blank fields.
+     * 
+     * @param pPlayboard actual playboard
+     * @return if it is has blank fields
+     */
+    public final boolean hasBlankFields(final TicTacToePlayboard pPlayboard) {
+        boolean hasBlankFields = false;
+        for (final Field field : pPlayboard.getFields()) {
             if (field.getToken().getTokenName().equals(TicTacToeToken.TOKEN_BLANK)) {
-                return true;
+                hasBlankFields = true;
             }
         }
-        return false;
+        return hasBlankFields;
     }
     
-    private boolean isFinishingMove(final TicTacToePlayboard pPlayboard, final Identifier pIdentifier, final AbstractToken pToken) {
+    /**
+     * Is this move the last one.
+     * 
+     * @param pPlayboard actual playboard
+     * @param pToken token for the player
+     * @return if it is the last move
+     */
+    private boolean isFinishingMove(final TicTacToePlayboard pPlayboard, final TicTacToeToken pToken) {
         return Rules.isSameTokenA1A2A3(pPlayboard, pToken.getType()) || Rules.isSameTokenA1B1C1(pPlayboard, pToken.getType())
                 || Rules.isSameTokenA1B2C3(pPlayboard, pToken.getType()) || Rules.isSameTokenA2B2C2(pPlayboard, pToken.getType())
                 || Rules.isSameTokenA3B3C3(pPlayboard, pToken.getType()) || Rules.isSameTokenB1B2B3(pPlayboard, pToken.getType())
                 || Rules.isSameTokenC1B2A3(pPlayboard, pToken.getType()) || Rules.isSameTokenC1C2C3(pPlayboard, pToken.getType());
     }
 
+    /**
+     * Is computer firs.
+     * 
+     * @return true if computer first
+     */
     private boolean isComputerFirst() {
-        return Math.random()<0.5?true:false;
+        return Math.random() < FIVEPOINTZERO;
     }
-
-    public boolean isComputerNext() {
+    
+    /**
+     * Is computer is next.
+     * 
+     * @return true if computer is next
+     */
+    public final boolean isComputerNext() {
         return this.isComputerNext;
     }
  
-    public boolean isFinishedGame() {
+    /**
+     * Is the game finished.
+     * 
+     * @return true if finished
+     */
+    public final boolean isFinishedGame() {
         return this.isFinishedGame;
     }
     
