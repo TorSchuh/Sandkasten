@@ -148,7 +148,7 @@ public final class Interaction {
         System.out.print("#    | | | | (__ | | (_| | (__ | | (_) |  __/  #\n");
         System.out.print("#    |_| |_|\\___||_|\\__,_|\\___||_|\\___/ \\___|  #\n");
         System.out.print("#                                              #\n");
-        System.out.print("################################################");
+        System.out.print("###############################################");
     }
     
     /**

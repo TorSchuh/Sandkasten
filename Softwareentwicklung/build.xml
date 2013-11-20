@@ -1,42 +1,39 @@
-<project name="TicTacToe" default="dist" basedir=".">
+<project name="TicTacToe" default="run" basedir=".">
     <description>
         build file for tictactoe game
     </description>
   <!-- set global properties for this build -->
-  <property name="src" location="src"/>
-  <property name="build" location="target/ant/build"/>
-  <property name="dist"  location="target/ant/dist"/>
- 
+  <property name="src.dir"   location="src"/>
+  <property name="build.dir" location="target/ant/build"/>
+  <property name="dist.dir"  location="target/ant/dist"/>
+	
   <presetdef name="ttt.javac">
     <javac includeantruntime="false" />
   </presetdef>
 	
   <target name="init">
-    <!-- Create the time stamp -->
     <tstamp/>
-    <!-- Create the build directory structure used by compile -->
-    <mkdir dir="${build}"/>
+    <mkdir dir="${build.dir}"/>
   </target>
  
-  <target name="compile" depends="init"
-        description="compile the source " >
-    <!-- Compile the java code from ${src} into ${build} -->
-    <ttt.javac srcdir="${src}" destdir="${build}"/>
+  <target name="compile" depends="init" description="compile the source " >
+    <ttt.javac srcdir="${src.dir}" destdir="${build.dir}"/>
   </target>
  
-  <target name="dist" depends="compile"
-        description="generate the distribution" >
-    <!-- Create the distribution directory -->
-    <mkdir dir="${dist}/lib"/>
- 
-    <!-- Put everything in ${build} into the TicTacToe-${DSTAMP}.jar file -->
-    <jar jarfile="${dist}/lib/TicTacToe-${DSTAMP}.jar" basedir="${build}"/>
+  <target name="dist" depends="compile" description="generate the distribution" >
+    <jar jarfile="${dist.dir}/lib/TicTacToe-${DSTAMP}.jar" basedir="${build.dir}"/>
   </target>
- 
-  <target name="clean"
-        description="clean up" >
-    <!-- Delete the ${build} and ${dist} directory trees -->
-    <delete dir="${build}"/>
-    <delete dir="${dist}"/>
+	
+  <target name="run" depends="dist">
+	<java classname="de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.TicTacToe">
+	  <classpath>
+		<pathelement location="${dist.dir}/lib/TicTacToe-${DSTAMP}.jar"/>
+	  </classpath>
+	</java>
+  </target>
+
+  <target name="clean" description="clean up" >
+    <delete dir="${build.dir}"/>
+    <delete dir="${dist.dir}"/>
   </target>
 </project>
