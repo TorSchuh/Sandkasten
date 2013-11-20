@@ -8,8 +8,8 @@
     <language>en-us</language>
     <copyright>&#169;2013</copyright>
     <item>
-      <title>File: 33,
-             Errors: 401,
+      <title>File: 21,
+             Errors: 348,
              Warnings: 0,
              Infos: 0
       </title>
@@ -29,20 +29,6 @@
           <tbody>
                           <tr>
                 <td>
-                  <a href="${project.url}/checkstyle.html#de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.implementation.fields.FieldA3.java">de/torschuh/sandkasten/softwareentwicklung/kata/tictactoe/components/implementation/fields/FieldA3.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  5
-                </td>
-              </tr>
-                          <tr>
-                <td>
                   <a href="${project.url}/checkstyle.html#de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.abstraction.package-info.java">de/torschuh/sandkasten/softwareentwicklung/kata/tictactoe/components/abstraction/package-info.java</a>
                 </td>
                 <td>
@@ -57,7 +43,7 @@
               </tr>
                           <tr>
                 <td>
-                  <a href="${project.url}/checkstyle.html#de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.implementation.tokens.TokenCross.java">de/torschuh/sandkasten/softwareentwicklung/kata/tictactoe/components/implementation/tokens/TokenCross.java</a>
+                  <a href="${project.url}/checkstyle.html#de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.abstraction.AbstractPlayboard.java">de/torschuh/sandkasten/softwareentwicklung/kata/tictactoe/components/abstraction/AbstractPlayboard.java</a>
                 </td>
                 <td>
                   0
@@ -66,12 +52,12 @@
                   0
                 </td>
                 <td>
-                  5
+                  16
                 </td>
               </tr>
                           <tr>
                 <td>
-                  <a href="${project.url}/checkstyle.html#de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.implementation.fields.FieldB1.java">de/torschuh/sandkasten/softwareentwicklung/kata/tictactoe/components/implementation/fields/FieldB1.java</a>
+                  <a href="${project.url}/checkstyle.html#de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.implementation.TicTacToeField.java">de/torschuh/sandkasten/softwareentwicklung/kata/tictactoe/components/implementation/TicTacToeField.java</a>
                 </td>
                 <td>
                   0
@@ -80,7 +66,63 @@
                   0
                 </td>
                 <td>
-                  5
+                  16
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="${project.url}/checkstyle.html#de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.implementation.TicTacToeToken.java">de/torschuh/sandkasten/softwareentwicklung/kata/tictactoe/components/implementation/TicTacToeToken.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  11
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="${project.url}/checkstyle.html#de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.abstraction.AbstractField.java">de/torschuh/sandkasten/softwareentwicklung/kata/tictactoe/components/abstraction/AbstractField.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  11
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="${project.url}/checkstyle.html#de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.game.Rules.java">de/torschuh/sandkasten/softwareentwicklung/kata/tictactoe/game/Rules.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  62
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="${project.url}/checkstyle.html#de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.implementation.TicTacToePlayboard.java">de/torschuh/sandkasten/softwareentwicklung/kata/tictactoe/components/implementation/TicTacToePlayboard.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  46
                 </td>
               </tr>
                           <tr>
@@ -94,12 +136,12 @@
                   0
                 </td>
                 <td>
-                  9
+                  7
                 </td>
               </tr>
                           <tr>
                 <td>
-                  <a href="${project.url}/checkstyle.html#de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.implementation.playboard.package-info.java">de/torschuh/sandkasten/softwareentwicklung/kata/tictactoe/components/implementation/playboard/package-info.java</a>
+                  <a href="${project.url}/checkstyle.html#de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.package-info.java">de/torschuh/sandkasten/softwareentwicklung/kata/tictactoe/components/package-info.java</a>
                 </td>
                 <td>
                   0
@@ -141,216 +183,6 @@
               </tr>
                           <tr>
                 <td>
-                  <a href="${project.url}/checkstyle.html#de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.implementation.fields.FieldB3.java">de/torschuh/sandkasten/softwareentwicklung/kata/tictactoe/components/implementation/fields/FieldB3.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  5
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="${project.url}/checkstyle.html#de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.implementation.fields.FieldB2.java">de/torschuh/sandkasten/softwareentwicklung/kata/tictactoe/components/implementation/fields/FieldB2.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  5
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="${project.url}/checkstyle.html#de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.interfaces.Token.java">de/torschuh/sandkasten/softwareentwicklung/kata/tictactoe/components/interfaces/Token.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  5
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="${project.url}/checkstyle.html#de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.implementation.fields.FieldC3.java">de/torschuh/sandkasten/softwareentwicklung/kata/tictactoe/components/implementation/fields/FieldC3.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  5
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="${project.url}/checkstyle.html#de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.TicTacToe.java">de/torschuh/sandkasten/softwareentwicklung/kata/tictactoe/TicTacToe.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  55
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="${project.url}/checkstyle.html#de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.implementation.fields.FieldA1.java">de/torschuh/sandkasten/softwareentwicklung/kata/tictactoe/components/implementation/fields/FieldA1.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  5
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="${project.url}/checkstyle.html#de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.implementation.tokens.TokenCircle.java">de/torschuh/sandkasten/softwareentwicklung/kata/tictactoe/components/implementation/tokens/TokenCircle.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  4
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="${project.url}/checkstyle.html#de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.package-info.java">de/torschuh/sandkasten/softwareentwicklung/kata/tictactoe/package-info.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  2
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="${project.url}/checkstyle.html#de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.interfaces.TokenType.java">de/torschuh/sandkasten/softwareentwicklung/kata/tictactoe/components/interfaces/TokenType.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  7
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="${project.url}/checkstyle.html#de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.abstraction.AbstractPlayboard.java">de/torschuh/sandkasten/softwareentwicklung/kata/tictactoe/components/abstraction/AbstractPlayboard.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  19
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="${project.url}/checkstyle.html#de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.abstraction.AbstractField.java">de/torschuh/sandkasten/softwareentwicklung/kata/tictactoe/components/abstraction/AbstractField.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  15
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="${project.url}/checkstyle.html#de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.game.Rules.java">de/torschuh/sandkasten/softwareentwicklung/kata/tictactoe/game/Rules.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  86
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="${project.url}/checkstyle.html#de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.package-info.java">de/torschuh/sandkasten/softwareentwicklung/kata/tictactoe/components/package-info.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  2
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="${project.url}/checkstyle.html#de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.implementation.fields.package-info.java">de/torschuh/sandkasten/softwareentwicklung/kata/tictactoe/components/implementation/fields/package-info.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  2
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="${project.url}/checkstyle.html#de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.implementation.playboard.PlayboardTicTacToe.java">de/torschuh/sandkasten/softwareentwicklung/kata/tictactoe/components/implementation/playboard/PlayboardTicTacToe.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  32
-                </td>
-              </tr>
-                          <tr>
-                <td>
                   <a href="${project.url}/checkstyle.html#de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.game.package-info.java">de/torschuh/sandkasten/softwareentwicklung/kata/tictactoe/game/package-info.java</a>
                 </td>
                 <td>
@@ -374,12 +206,12 @@
                   0
                 </td>
                 <td>
-                  13
+                  10
                 </td>
               </tr>
                           <tr>
                 <td>
-                  <a href="${project.url}/checkstyle.html#de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.implementation.tokens.package-info.java">de/torschuh/sandkasten/softwareentwicklung/kata/tictactoe/components/implementation/tokens/package-info.java</a>
+                  <a href="${project.url}/checkstyle.html#de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.interfaces.Token.java">de/torschuh/sandkasten/softwareentwicklung/kata/tictactoe/components/interfaces/Token.java</a>
                 </td>
                 <td>
                   0
@@ -388,12 +220,12 @@
                   0
                 </td>
                 <td>
-                  2
+                  6
                 </td>
               </tr>
                           <tr>
                 <td>
-                  <a href="${project.url}/checkstyle.html#de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.interfaces.Locatable.java">de/torschuh/sandkasten/softwareentwicklung/kata/tictactoe/components/interfaces/Locatable.java</a>
+                  <a href="${project.url}/checkstyle.html#de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.TicTacToe.java">de/torschuh/sandkasten/softwareentwicklung/kata/tictactoe/TicTacToe.java</a>
                 </td>
                 <td>
                   0
@@ -402,7 +234,7 @@
                   0
                 </td>
                 <td>
-                  7
+                  28
                 </td>
               </tr>
                           <tr>
@@ -416,12 +248,12 @@
                   0
                 </td>
                 <td>
-                  69
+                  53
                 </td>
               </tr>
                           <tr>
                 <td>
-                  <a href="${project.url}/checkstyle.html#de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.implementation.fields.FieldC2.java">de/torschuh/sandkasten/softwareentwicklung/kata/tictactoe/components/implementation/fields/FieldC2.java</a>
+                  <a href="${project.url}/checkstyle.html#de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.interfaces.FieldIdentifiable.java">de/torschuh/sandkasten/softwareentwicklung/kata/tictactoe/components/interfaces/FieldIdentifiable.java</a>
                 </td>
                 <td>
                   0
@@ -430,7 +262,21 @@
                   0
                 </td>
                 <td>
-                  5
+                  8
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="${project.url}/checkstyle.html#de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.game.Interaction.java">de/torschuh/sandkasten/softwareentwicklung/kata/tictactoe/game/Interaction.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  47
                 </td>
               </tr>
                           <tr>
@@ -449,7 +295,7 @@
               </tr>
                           <tr>
                 <td>
-                  <a href="${project.url}/checkstyle.html#de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.implementation.fields.FieldA2.java">de/torschuh/sandkasten/softwareentwicklung/kata/tictactoe/components/implementation/fields/FieldA2.java</a>
+                  <a href="${project.url}/checkstyle.html#de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.interfaces.TokenTypeable.java">de/torschuh/sandkasten/softwareentwicklung/kata/tictactoe/components/interfaces/TokenTypeable.java</a>
                 </td>
                 <td>
                   0
@@ -458,12 +304,12 @@
                   0
                 </td>
                 <td>
-                  5
+                  8
                 </td>
               </tr>
                           <tr>
                 <td>
-                  <a href="${project.url}/checkstyle.html#de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.implementation.tokens.TokenBlank.java">de/torschuh/sandkasten/softwareentwicklung/kata/tictactoe/components/implementation/tokens/TokenBlank.java</a>
+                  <a href="${project.url}/checkstyle.html#de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.package-info.java">de/torschuh/sandkasten/softwareentwicklung/kata/tictactoe/package-info.java</a>
                 </td>
                 <td>
                   0
@@ -472,21 +318,7 @@
                   0
                 </td>
                 <td>
-                  5
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="${project.url}/checkstyle.html#de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.implementation.fields.FieldC1.java">de/torschuh/sandkasten/softwareentwicklung/kata/tictactoe/components/implementation/fields/FieldC1.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  5
+                  2
                 </td>
               </tr>
                       </tbody>
