@@ -23,7 +23,7 @@ public final class TicTacToe {
     private static TicTacToePlayboard playboard;
     
     /**
-     * Token symbol of the human player. 
+     * Token symbol for the human player. 
      */
     private static String humanTokenSymbol;
     
