@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite failures="0" time="0.143" errors="0" skipped="0" tests="3" name="de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.test.TicTacToeTokenTest">
+<testsuite failures="0" time="0.063" errors="0" skipped="0" tests="3" name="de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.test.TicTacToeTokenTest">
   <properties>
-    <property name="http.agent" value="Sonar Maven/3.0.4"/>
-    <property name="ROOT_LOGGER_LEVEL" value="INFO"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="D:\Development\JVA\Java\jdk\1.7.0_09\jre\bin"/>
     <property name="java.vm.version" value="23.5-b02"/>
@@ -28,9 +26,9 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="user.variant" value=""/>
     <property name="os.name" value="Windows 7"/>
-    <property name="classworlds.conf" value="D:\Development\PRJ\workspace master\.metadata\.plugins\org.eclipse.m2e.core\launches\m2conf7339411692954577850.tmp"/>
+    <property name="classworlds.conf" value="D:\Development\PRJ\workspace master\.metadata\.plugins\org.eclipse.m2e.core\launches\m2conf184042056337005771.tmp"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.library.path" value="D:\Development\JVA\Java\jdk\1.7.0_09\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\AMD APP\bin\x86_64;C:\Program Files (x86)\AMD APP\bin\x86;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;D:\Development\JVA\Java\jdk\1.7.0_09\bin;D:\Development\JVA\Java\jre\1.7.0_09\bin;D:\Development\LIB\jdepend\jdepend-2.9.1\lib;D:\Development\LIB\sonar-3.7.3\lib;."/>
+    <property name="java.library.path" value="D:\Development\JVA\Java\jdk\1.7.0_09\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\AMD APP\bin\x86_64;C:\Program Files (x86)\AMD APP\bin\x86;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;D:\Development\JVA\Java\jdk\1.7.0_09\bin;D:\Development\JVA\Java\jre\1.7.0_09\bin;D:\Development\LIB\jdepend\jdepend-2.9.1\lib;D:\Development\LIB\sonar-3.7.3\lib;C:\Program Files\TortoiseGit\bin;."/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.class.version" value="51.0"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
@@ -45,7 +43,7 @@
     <property name="java.vm.specification.version" value="1.7"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.home" value="D:\Development\JVA\Java\jdk\1.7.0_09\jre"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -B -s C:\Users\Torsten\.m2\settings.xml clean test sonar:sonar site compile"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -B -s C:\Users\Torsten\.m2\settings.xml clean test compile"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="user.language" value="de"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -62,7 +60,7 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase time="0.01" classname="de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.test.TicTacToeTokenTest" name="testGetType"/>
+  <testcase time="0.004" classname="de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.test.TicTacToeTokenTest" name="testGetType"/>
   <testcase time="0" classname="de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.test.TicTacToeTokenTest" name="testGetTokenName"/>
   <testcase time="0" classname="de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.test.TicTacToeTokenTest" name="testTicTacToeToken"/>
 </testsuite>
