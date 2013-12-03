@@ -9,7 +9,6 @@ import de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.components.inte
 
 /**
  * @author Torsten
- *
  */
 public class TicTacToeTokenTest {
     

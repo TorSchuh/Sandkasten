@@ -13,19 +13,22 @@ import de.torschuh.sandkasten.softwareentwicklung.kata.tictactoe.game.Interactio
 public final class TicTacToe {
     
     /**
-     * 
+     * Gameplay of the TicTacToe game.
      */
-    private static Gameplay gameplay; 
+    private static Gameplay gameplay;
+    
     /**
-     * 
+     * Playboard of the TicTacToe game.
      */
     private static TicTacToePlayboard playboard;
+    
     /**
-     * 
+     * Token symbol of the human player. 
      */
     private static String humanTokenSymbol;
+    
     /**
-     * 
+     * If end of game is reached.  
      */
     private static boolean endOfGame; 
     
