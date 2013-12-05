@@ -1,4 +1,7 @@
 /**
+ * 
+ * Classes with the components of a TicTacToe game.
+ * 
  * @author Torsten
  *
  */

@@ -68,9 +68,13 @@ public final class Interaction {
     public static Identifier askForHumanNextMove(final Gameplay pGameplay, final TicTacToePlayboard pPlayboard) {
         String identifier;
         do {
-            identifier = getUserInput("your turn");
-            if (pGameplay.isValidMove(pPlayboard, Identifier.valueOf(identifier))) {
-                return Identifier.valueOf(identifier);
+            try {
+                identifier = getUserInput("your turn");
+                if (pGameplay.isValidMove(pPlayboard, Identifier.valueOf(identifier))) {
+                    return Identifier.valueOf(identifier);
+                }
+            } catch (IllegalArgumentException e) {
+                System.out.println("#  > position not valid!");
             }
         } while (true);        
     }
@@ -91,7 +95,7 @@ public final class Interaction {
                 returnString = returnString.toUpperCase(Locale.GERMAN);    
             }
         } catch (IOException e) {
-            System.out.println("Error reading user input!");
+            System.out.println("error reading user input!");
         }
         return returnString;
     }
@@ -109,6 +113,8 @@ public final class Interaction {
                 System.out.print("#\n#\n#    Human: " + getHumanToken(symbol).getTokenName() 
                                 + "  vs. Computer: " + getComputerToken(symbol).getTokenName() + "\n");
                 return symbol;
+            } else {
+                System.out.println("#  > symbol not valid!");
             }
         } while (true);
     }
@@ -148,7 +154,7 @@ public final class Interaction {
         System.out.print("#    | | | | (__ | | (_| | (__ | | (_) |  __/  #\n");
         System.out.print("#    |_| |_|\\___||_|\\__,_|\\___||_|\\___/ \\___|  #\n");
         System.out.print("#                                              #\n");
-        System.out.print("###############################################");
+        System.out.print("###############################################\n");
     }
     
     /**
